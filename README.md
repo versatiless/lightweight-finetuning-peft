@@ -1,4 +1,4 @@
-# 🪶 Lightweight Fine-Tuning with PEFT (LoRA & QLoRA) on AG News
+# Lightweight Fine-Tuning with PEFT (LoRA & QLoRA) on AG News
 
 This project explores **parameter-efficient fine-tuning (PEFT)** techniques using Hugging Face’s `peft` library.  
 Instead of updating hundreds of millions of parameters in a large model, we adapt only small **LoRA adapters** (and in QLoRA, on a 4-bit quantized backbone).  
@@ -7,7 +7,7 @@ The result: **competitive accuracy with <2% of parameters trainable**, making fi
 
 ---
 
-## 🚀 Project Goal
+## Project Goal
 - Demonstrate how **LoRA** and **QLoRA** can drastically reduce training cost and memory usage.  
 - Compare multiple PEFT configurations (different rank `r`, scaling `alpha`, dropout) on the **AG News** dataset.  
 - Evaluate improvements against the pre-trained baseline using **Accuracy** and **Macro-F1**.  
@@ -15,7 +15,7 @@ The result: **competitive accuracy with <2% of parameters trainable**, making fi
 
 ---
 
-## 📂 Dataset
+## Dataset
 **AG News Topic Classification**  
 - 120,000 training samples  
 - 7,600 test samples  
@@ -23,7 +23,7 @@ The result: **competitive accuracy with <2% of parameters trainable**, making fi
 
 ---
 
-## 🧩 Methodology
+## Methodology
 1. **Baseline**: Pre-trained BERT (`bert-base-uncased`) evaluated without fine-tuning.  
 2. **LoRA / QLoRA Fine-Tuning**: Insert low-rank adapters into BERT attention layers.  
 3. **PEFT Grid Search**: Compare multiple configs:  
@@ -36,7 +36,7 @@ The result: **competitive accuracy with <2% of parameters trainable**, making fi
 
 ---
 
-## 📊 Results
+## Results
 | Run                | r  | α  | Dropout | Val Acc | Val F1 | Test Acc | Test F1 | Trainable Params |
 |--------------------|----|----|---------|---------|--------|----------|---------|------------------|
 | LoRA r=8 α=16 d=0.05 | 8  | 16 | 0.05    | 0.89    | 0.89   | 0.90     | 0.90    | ~1.1M (1.7%)     |
@@ -48,7 +48,7 @@ The result: **competitive accuracy with <2% of parameters trainable**, making fi
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 - [Transformers](https://huggingface.co/transformers/)  
 - [PEFT](https://huggingface.co/docs/peft/index) (LoRA / QLoRA)  
 - [Datasets](https://huggingface.co/docs/datasets/)  
@@ -57,7 +57,7 @@ The result: **competitive accuracy with <2% of parameters trainable**, making fi
 
 ---
 
-## 🛠️ How to Run
+## How to Run
 ```bash
 # Clone repo
 git clone https://github.com/yourusername/lightweight-finetuning.git
